@@ -1,6 +1,8 @@
 .page {
 }
 .bakery {
+	@include adaptiveValue("padding-top", 90, 70, 1170, 767, 1);
+	background-color: rgba(231, 212, 190, 0.44);
 
 		&__body {
 			@media (min-width: 767px) {
@@ -9,7 +11,6 @@
 		}
 
 		&__content {
-			background-color: rgba(231, 212, 190, 0.44);
 			@media (min-width: 767px) {
 				flex: 0 0 100%;
 			}
@@ -23,6 +24,7 @@
 				width: 50%;
 				@include adaptiveValue("padding-right", 120, 40, 1170, 767, 2);
 			}
+			position: relative;
 		}
 
 		&__label {
@@ -37,24 +39,52 @@
 		&__text {
 			@include adaptiveValue("font-size", 20, 16);
 			line-height: 160%; /* 32/20 */
+			@media (max-width: 767px) {
+				@include adaptiveValue("padding-bottom", 30, 20, 767, 320, 1);
+			}
 		}
 
 		&__decor {
 
 			&_1 {
+				position: absolute;
+				top: 0px;
+				left: -130px;
+				z-index: -1;
+				@media (max-width: 1350px) {
+					left: 0;
+				}
+				@media (max-width: 767px) {
+					display: none;
+				}
 			}
 
 			&_2 {
+				position: absolute;
+				top: 33%;
+				left: 45%;
+				@media (max-width: 767px) {
+					display: none;
+				}
+				@media (max-width: 1200px) {
+					display: none;
+				}
 			}
 		}
 
 		&__image {
 			img {
 				max-width: 100%;
+				@media (max-width: 767px) {
+					width: 100%;
+				}
 			}
 			@media (min-width: 767px) {
 				flex: 0 0 50%;
 				transform: translate(-100%, 0);
+			}
+			@media (max-width: 767px) {
+				padding: 0px 15px;
 			}
 		}
 }

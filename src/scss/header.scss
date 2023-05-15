@@ -91,6 +91,9 @@ body._lock {
 //  ====================================================================================================//
 
 .header {
+	position: fixed;
+	width: 100%;
+	z-index: 10;
 
 	&__container {
 	}
@@ -120,13 +123,13 @@ body._lock {
 	}
 
 	&__body {
-		//width: 100%;
 		display: flex;
-		//justify-content:space-between;
 		flex: 1 1 auto;
 	}
 
 	&__list {
+		position: relative;
+		z-index: 3;
 		display: flex;
 		align-items: center;
 		gap: 60px;

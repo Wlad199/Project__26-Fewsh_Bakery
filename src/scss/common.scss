@@ -75,6 +75,7 @@
 		@include adaptiveValue("padding-bottom", 35, 20);
 		@media (max-width: 992px) {
 			line-height: 120%;
+			color: #000;
 		}
 	}
 }
@@ -92,7 +93,6 @@
 .slick-arrow{
 	position: absolute;
 	left: -70px;
-	z-index: 10;
 	font-size: 0;
 	height: 50px;
 	width: 50px;

@@ -92,7 +92,7 @@
 
 // about ====================================================================================================//
 .about {
-	@include adaptiveValue("padding-top", 160, 40);
+	@include adaptiveValue("padding-top", 160, 50);
 
 	&__container {
 	}
@@ -101,15 +101,25 @@
 		display: flex;
 		@media (max-width: 992px) {
 			flex-direction: column;
+			position: relative;
 		}
 	}
 
 	&__image {
 		flex: 0 1 50%;
-		min-width: 400px;
+		min-width: 390px;
 		position: relative;
 		@media (max-width: 992px) {
 			order: 2;
+			margin: 0 0 0 auto;
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			opacity: 0.4;
+			//display: none;
 		}
 		img {
 			max-width: 100%;
@@ -152,6 +162,9 @@
 	&__quote {
 		line-height: 200%; /* 32/16 */
 		color: #171B1B;
+		@media (max-width: 992px) {
+			@include adaptiveValue("padding-bottom", 30, 20, 992, 320, 1);
+		}
 	}
 }
 .slider-about {

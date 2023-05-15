@@ -26,3 +26,21 @@
 		}
 	}
 }
+
+// label ====================================================================================================//
+
+.label {
+	font-family: oswald;
+	line-height: 200%; /* 32/16 */
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+
+// title ====================================================================================================//
+
+.title {
+	font-family: ultra;
+	@include adaptiveValue("font-size", 72, 40);
+	line-height: 111.111111%; /* 80/72 */
+	
+}

@@ -94,6 +94,7 @@ body._lock {
 	position: fixed;
 	width: 100%;
 	z-index: 10;
+	background-color: #fff;
 
 	&__container {
 	}
@@ -102,6 +103,16 @@ body._lock {
 		@include adaptiveValue("height", 90, 70, 1170, 767, 1);
 	}
 }
+
+.header._header-scroll .header__menu{
+	height: 70px;
+}
+
+.header._header-scroll{
+	background: rgba(#fff, 0.5);
+	backdrop-filter: blur(5px);
+}
+
 .menu {
 	display: flex;
 	align-items: center;

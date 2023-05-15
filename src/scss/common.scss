@@ -40,7 +40,70 @@
 
 .title {
 	font-family: ultra;
-	@include adaptiveValue("font-size", 72, 40);
+	@include adaptiveValue("font-size", 72, 30);
 	line-height: 111.111111%; /* 80/72 */
-	
+
+}
+
+// slider-vertical ====================================================================================================//
+
+.slider-vertical {
+	position: relative;
+	min-width: 0;
+
+	&__item {
+	}
+
+	&__number {
+		font-family: oswald;
+		line-height: 200%; /* 32/16 */
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		padding-bottom: 8px;
+	}
+
+	&__sub-title {
+		font-family: oswald;
+		@include adaptiveValue("font-size", 24, 18);
+		line-height: 133.333333%; /* 32/24 */
+		@include adaptiveValue("padding-bottom", 20, 15);
+	}
+
+	&__text {
+		color: rgba(51, 51, 51, 0.496405);
+		line-height: 200%; /* 32/16 */
+		@include adaptiveValue("padding-bottom", 35, 20);
+		@media (max-width: 992px) {
+			line-height: 120%;
+		}
+	}
+}
+
+//  ====================================================================================================//
+/* Ограничивающая оболочка */
+.slick-list {
+	overflow: hidden;	//!!! Скрыть лишние слайды
+}
+/* Лента слайдов */
+.slick-track{
+	//display: flex;	//!!! Выстроить в ряд
+}
+/* Стрелки*/
+.slick-arrow{
+	position: absolute;
+	left: -70px;
+	z-index: 10;
+	font-size: 0;
+	height: 50px;
+	width: 50px;
+}
+/* Стрелка влево */
+.slick-arrow.slick-prev{
+	top: 30px;
+	background: url('@img/about/icons/arrow-top.svg') 0 0 no-repeat;
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next{
+	top: 90px;
+	background: url('@img/about/icons/arrow-bottom.svg') 0 0 no-repeat;
 }

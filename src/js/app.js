@@ -13,11 +13,11 @@ import * as flsFunctions from "./files/functions.js";
 //===============================================================================================
 
 /* MW Подключение JQ */
-// import '../js/files/my-js/jq.js'
+import '../js/files/my-js/jq.js'
 //===================//
 
 /* MW Подключение  Slick Slider */
-// import '../js/files/my-js/slick.min.js'
+import '../js/files/my-js/slick.min.js'
 //===================//
 
 /* MW Модуль для работы с меню (Бургер) */
@@ -25,7 +25,7 @@ flsFunctions.MenuBurg();
 //===================//
 
 // Функционал добавления классов к хедеру при прокрутке
-// flsScroll.headerScroll();
+flsScroll.headerScroll();
 //===================//
 
 /* MW (3.106) Добавление класса touch для HTML если браузер мобильный */

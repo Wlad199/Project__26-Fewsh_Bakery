@@ -110,7 +110,7 @@
 		min-width: 390px;
 		position: relative;
 		@media (max-width: 992px) {
-			order: 2;
+			//order: 2;
 			margin: 0 0 0 auto;
 			position: absolute;
 			z-index: -1;
@@ -119,7 +119,6 @@
 			height: 100%;
 			width: 100%;
 			opacity: 0.4;
-			//display: none;
 		}
 		img {
 			max-width: 100%;
@@ -167,5 +166,109 @@
 		}
 	}
 }
-.slider-about {
+
+// features ====================================================================================================//
+
+.features {
+	@include adaptiveValue("padding-top", 150, 40);
+
+	&__container {
+	}
+
+	&__label {
+		@include adaptiveValue("padding-bottom", 18, 10);
+		@media (min-width: 767px) {
+			text-align: center;
+		}
+	}
+
+	&__title {
+		@media (min-width: 767px) {
+			text-align: center;
+		}
+		@include adaptiveValue("padding-bottom", 50, 30);
+	}
+
+	&__content {
+		display: flex;
+		@media (max-width: 767px) {
+			flex-wrap: wrap;
+		}
+	}
+}
+
+.content-features {
+
+	&__column {
+		position: relative;
+		flex: 0 1 33.333%;
+		@media (max-width: 767px) {
+			flex: 0 1 100%;
+			@include adaptiveValue("padding-top", 50, 20, 767, 320, 1);
+			@include adaptiveValue("padding-bottom", 50, 20, 767, 320, 1);
+			@include adaptiveValue("padding-right", 40, 15, 767, 320, 1);
+			@include adaptiveValue("padding-left", 40, 15, 767, 320, 1);
+			&:not(:last-child){
+				margin-bottom: 10px;
+			}
+		}
+		//padding: 50px 40px 50px 60px;
+		@include adaptiveValue("padding-top", 50, 20, 1170, 767, 2);
+		@include adaptiveValue("padding-bottom", 50, 20, 1170, 767, 2);
+		@include adaptiveValue("padding-right", 40, 15, 1170, 767, 2);
+		@include adaptiveValue("padding-left", 50, 20, 1170, 767, 2);
+		transition: all 0.2s ease 0s;
+		cursor: pointer;
+		@media (max-width: 767px) {
+			background-color: #F9BF77;
+			path {
+				fill: #fff;
+			}
+		}
+		&:hover {
+			background-color: #F9BF77;
+			.content-features__decor {
+				opacity: 1;
+			}
+			path {
+				fill: #fff;
+			}
+		}
+	}
+
+	&__image {
+		img {
+			max-width: 100%;
+		}
+		path {
+			transition: all 0.3s ease 0s;
+		}
+		@include adaptiveValue("padding-bottom", 60, 20);
+	}
+
+	&__sub-title {
+		@include adaptiveValue("padding-bottom", 18, 15);
+	}
+
+	&__text {
+	}
+
+	&__decor {
+		position: absolute;
+		top: 0;
+		right: 0;
+		opacity: 0;
+		transition: opacity 0.3s ease 0s;
+		@media (max-width: 1050px) {
+			transform: scale(0.6) translate(34%, -35%);
+		}
+		@media (max-width: 767px) {
+			opacity: 1;
+			transform: none;
+		}
+		@media (max-width: 500px) {
+			transform: scale(0.6) translate(34%, -34%);
+		}
+	}
+
 }

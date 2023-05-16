@@ -362,6 +362,7 @@
 
 .products {
 	@include adaptiveValue("padding-top", 105, 40);
+	@include adaptiveValue("padding-bottom", 110, 30);
 
 	&__container {
 	}
@@ -485,5 +486,106 @@
 				width: 100%;
 			}
 		}
+	}
+}
+
+// process ====================================================================================================//
+
+.process {
+	position: relative;
+	background-color: #000;
+	@include adaptiveValue("padding-top", 100, 60);
+	@include adaptiveValue("padding-bottom", 185, 60);
+
+	&__container {
+	}
+
+	&__label {
+		text-align: center;
+		@include adaptiveValue("padding-bottom", 20, 10);
+	}
+
+	&__title {
+		text-align: center;
+		@include adaptiveValue("padding-bottom", 70, 30);
+	}
+
+	&__content {
+	}
+
+	&__line {
+		position: absolute;
+		top: 0;
+		left: 0;
+		@media (max-width: 450px) {
+			display: none;
+		}
+	}
+}
+
+.content-process {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1px;
+	@media (max-width: 767px) {
+		gap: 5px;
+	}
+	
+
+	&__item {
+		position: relative;
+		flex: 0 1 calc(25% - 1.5px);
+		background-color: #fff;
+		transition: all 0.3s ease 0s;
+		@media (max-width: 992px) {
+			flex: 0 1 calc(50% - 1px);
+			background-color: #fbb65f;
+		}
+		@media (max-width: 767px) {
+			flex: 0 1 100%;
+		}
+		&:hover{
+			@media (min-width: 992px) {
+				background-color: #fbb65f;
+				transform: scale(1.03);
+				.content-process__decor{
+					opacity: 1;
+			}
+			}
+		}
+	}
+
+	&__body {
+		padding: 40px 50px 50px 30px;
+		@media (max-width: 1200px) {
+			padding: 20px 15px 30px 15px;
+		}
+	}
+
+	&__label {
+		@include adaptiveValue("padding-bottom", 96, 30);
+	}
+
+	&__sub-title {
+		@include adaptiveValue("padding-bottom", 20, 10);
+	}
+
+	&__text {
+	}
+
+	&__decor {
+		position: absolute;
+		top: 0;
+		right: 0;
+		transition: all 0.3s ease 0s;
+		@media (min-width: 990px) {
+			opacity: 0;
+		}
+		@media (max-width: 450px) {
+			right: -32px;
+		img {
+			width: 80%;
+		}
+	}
 	}
 }

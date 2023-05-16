@@ -34,6 +34,9 @@ body::after {
 .popup_show .popup__content {
 	visibility: visible;
 	transform: scale(1);
+	@media (min-width: 767px) {
+		transform: scale(2);
+	}
 }
 .popup__wrapper {
 	display: flex;
@@ -51,9 +54,9 @@ body::after {
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
 	background-color: #eee;
-	padding: 20px;
+	padding: 3px;
 	width: 100%;
-	max-width: 900px;
+	max-width: 306px;
 	border-radius: 20px;
 	.lock & {
 		visibility: visible;

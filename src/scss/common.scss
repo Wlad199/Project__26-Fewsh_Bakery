@@ -34,6 +34,9 @@
 	line-height: 200%; /* 32/16 */
 	letter-spacing: 3px;
 	text-transform: uppercase;
+	&_w {
+		color: #fff;
+	}
 }
 
 // title ====================================================================================================//
@@ -42,6 +45,9 @@
 	font-family: ultra;
 	@include adaptiveValue("font-size", 72, 30);
 	line-height: 111.111111%; /* 80/72 */
+	&_w {
+		color: #fff;
+	}
 
 }
 
@@ -122,4 +128,17 @@
 .slick-arrow.slick-next{
 	top: 90px;
 	background: url('@img/about/icons/arrow-bottom.svg') 0 0 no-repeat;
+}
+
+// iframe ====================================================================================================//
+
+.popup__text {
+	iframe {
+		border-radius: 15px;
+	}
+}
+
+.popup__content {
+	height: 100%;
+	width: 100%;
 }

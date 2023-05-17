@@ -146,4 +146,9 @@ $(document).ready(function () {
 //.slick-dots li.slick-active button{
 //	background-color: #000;
 //}
+
+///* убрать лишний слайд */
+//.slick-list.draggable {
+//	padding: 0 !important;
+//}
 //  ====================================================================================================//

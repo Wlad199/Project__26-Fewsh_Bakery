@@ -12,3 +12,27 @@ $(document).ready(function () {
 		slidesToShow: 1,
 	});
 })
+
+$(document).ready(function () {
+	$('.testimonials__slider').slick({
+		slidesToShow: 3,
+		dots: true,
+		touchThreshold: 10,
+		centerMode: true,
+		autoplay: true,
+		pauseOnDotsHover: true,
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 2,
+				}
+			}, {
+				breakpoint: 650,
+				settings: {
+					slidesToShow: 1,
+				}
+			},
+		],
+	});
+})

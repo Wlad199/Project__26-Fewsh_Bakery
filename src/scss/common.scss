@@ -66,7 +66,7 @@
 
 .title {
 	font-family: ultra;
-	@include adaptiveValue("font-size", 72, 30);
+	@include adaptiveValue("font-size", 56, 30);
 	line-height: 111.111111%; /* 80/72 */
 	&_w {
 		color: #fff;
@@ -117,6 +117,7 @@
 .slider-vertical {
 	position: relative;
 	min-width: 0;
+	@include adaptiveValue("padding-bottom", 35, 20);
 
 	&__item {
 	}
@@ -139,7 +140,6 @@
 	&__text {
 		color: rgba(51, 51, 51, 0.496405);
 		line-height: 200%; /* 32/16 */
-		@include adaptiveValue("padding-bottom", 35, 20);
 		@media (max-width: 992px) {
 			line-height: 120%;
 			color: #000;
@@ -188,3 +188,39 @@
 }
 
 //  ====================================================================================================//
+
+.testimonials__slider{
+	.slick-track{
+		display: flex;	//!!! Выстроить в ряд
+	}
+	.slick-list {
+		overflow: hidden;	//!!! Скрыть лишние слайды
+	}
+
+
+	/*точки */
+	.slick-dots{
+		display: flex;
+		//align-items: center;
+		justify-content: center;
+	}
+	.slick-dots li{
+		@include adaptiveValue("padding-top", 50, 20);
+		margin: 0px 10px;
+		list-style: none;
+	}
+	.slick-dots li button{
+		font-size: 0;
+		height: 8px;
+		width: 8px;
+		border-radius: 50%;
+		background-color: #9EAD8D;
+	}
+	/* Активная точка */
+	.slick-dots li.slick-active button{
+		height: 16px;
+		width: 16px;
+		background-color: #171B1B;
+	}
+}
+
